@@ -1,0 +1,19 @@
+:root { font-family: Inter, Segoe UI, Arial, sans-serif; color: #172033; background: #f2f5fb; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; }
+.page { width: min(760px, 92%); margin: 56px auto 24px; }
+.card { background: #fff; padding: clamp(22px, 5vw, 44px); border-radius: 22px; box-shadow: 0 18px 55px rgba(24, 39, 75, .10); }
+.eyebrow { color: #4f46e5; font-weight: 800; font-size: .78rem; letter-spacing: .13em; }
+h1 { margin: 12px 0; font-size: clamp(2rem, 6vw, 3rem); }
+.intro { color: #596579; margin-bottom: 28px; }
+label { display: block; font-weight: 700; margin-bottom: 9px; }
+textarea { width: 100%; padding: 15px; border: 1px solid #cbd3e1; border-radius: 12px; font: inherit; resize: vertical; }
+textarea:focus { outline: 3px solid #c7d2fe; border-color: #6366f1; }
+button { margin-top: 15px; width: 100%; border: 0; border-radius: 12px; padding: 14px 18px; color: #fff; background: #4f46e5; font-weight: 800; font-size: 1rem; cursor: pointer; }
+button:hover { background: #3730a3; }
+.result, .message { margin-top: 22px; padding: 18px; border-radius: 12px; background: #eef2ff; }
+.result-label { display: block; color: #596579; font-size: .85rem; }
+.result strong { display: block; margin: 7px 0; font-size: 1.7rem; }
+.result p, .disclaimer { color: #596579; font-size: .9rem; line-height: 1.55; }
+.disclaimer { border-top: 1px solid #e5e9f2; padding-top: 18px; margin-top: 24px; }
+footer { text-align: center; padding: 22px; color: #697386; font-size: .9rem; }

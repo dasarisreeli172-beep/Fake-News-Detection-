@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fake News Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="eyebrow">MACHINE LEARNING • NLP</div>
+      <h1>Fake News Detection</h1>
+      <p class="intro">Paste a headline or article to see the model's prediction.</p>
+      <form method="post">
+        <label for="news_text">News text</label>
+        <textarea id="news_text" name="news_text" rows="8"
+          placeholder="Paste a headline or article here..." required>{{ news_text }}</textarea>
+        <button type="submit">Analyze news</button>
+      </form>
+
+      {% if prediction %}
+        <div class="result">
+          <span class="result-label">Model prediction</span>
+          <strong>{{ prediction }}</strong>
+          <p>This is a machine-learning estimate, not a fact-check or proof.</p>
+        </div>
+      {% endif %}
+      {% if message %}
+        <div class="message">{{ message }}</div>
+      {% endif %}
+      <p class="disclaimer">
+        Important: A text classifier can make mistakes and may reflect bias in its training data.
+        Verify important claims with multiple reliable sources.
+      </p>
+    </section>
+    <footer>Student project • Python + Flask + Scikit-learn</footer>
+  </main>
+</body>
+</html>
